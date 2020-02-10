@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Databases</title>
 </head>
+
 <body>
     <h1>Databases</h1>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDMNhDA8Ym1LUWc6-xG7ezVh4Gr_NGuMFw",
+            authDomain: "first-project-44fa1.firebaseapp.com",
+            databaseURL: "https://first-project-44fa1.firebaseio.com",
+            projectId: "first-project-44fa1",
+            storageBucket: "first-project-44fa1.appspot.com",
+            messagingSenderId: "920439746358",
+            appId: "1:920439746358:web:2c51dec1e813e85f29cd97"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="sandbox.js"></script>
 </body>
+
 </html>
