@@ -1,7 +1,7 @@
 const list=document.querySelector('ul');
 
 const addRecipe = (recipe) => {
- //   console.log(recipe);
+    console.log(recipe.created_at);
     let html = `
     <li>
         <div>${recipe.title}</div>
