@@ -14,7 +14,10 @@ const addRecipe = (recipe,id) => {
     `;
     list.innerHTML +=html;
 }
-
+//get documents
+db.collection('recipes').onSnapshot(snapshot=>{
+    console.log(snapshot.docChanges()); 
+});
 // add documents
 form.addEventListener('submit', e => {
     e.preventDefault();
