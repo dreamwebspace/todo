@@ -1,4 +1,6 @@
 const list=document.querySelector('ul');
+const form=document.querySelector('form');
+
 
 const addRecipe = (recipe) => {
     console.log(recipe.created_at);
@@ -10,7 +12,7 @@ const addRecipe = (recipe) => {
     `;
     list.innerHTML +=html;
 }
-
+// get documents
 db.collection('recipes').get().then((snapshot) => {
     //when we have data
     snapshot.docs.forEach(doc => {
