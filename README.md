@@ -1,1 +1,1 @@
-# js-firebase
+# to-do using js bootstrap and firebase firestore
