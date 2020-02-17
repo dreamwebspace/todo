@@ -14,9 +14,25 @@ const addRecipe = (recipe,id) => {
     `;
     list.innerHTML +=html;
 }
+const deleteRecipe = (id)=>{
+    const recipes = document.querySelectorAll('li');
+    recipes.forEach(recipe=>{
+        if(recipe.getAttribute('data-id')===id){
+            recipe.remove();
+        }
+    })
+}
 //get documents
 db.collection('recipes').onSnapshot(snapshot=>{
-    console.log(snapshot.docChanges()); 
+    snapshot.docChanges().forEach(change=>{
+        const doc=change.doc;
+        console.log(doc);
+        if (change.type==='added'){
+            addRecipe(doc.data(), doc.id);
+        } else if (change.type==='removed') {
+            deleteRecipe(doc.id);
+        }
+    }) 
 });
 // add documents
 form.addEventListener('submit', e => {
